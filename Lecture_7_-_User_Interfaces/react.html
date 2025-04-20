@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='eng'>
+    <head>
+        <title>React</title>
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            function App2() { //this function is a component: a part of web app<s UI
+                const x = 1;
+                const y = 2;
+                return(
+                    <div>{ x + y }</div> //{ } used to plug in values of var
+                );
+            }
+            function Hello(props) { //props is short for property; react allows us to give fct agruments, but different way to reference value of argument
+                return(
+                    <h1>Hello, { props.name }! </h1>
+                );
+            };
+            function App() {
+                return(
+                    <div>
+                        <Hello name="Harry"/>
+                        <Hello name="Hermione"/>
+                        <Hello name="Ron"/>
+                    </div>
+                );
+            };
+            ReactDOM.render(<App />, document.querySelector("#app"));
+            // Arg1: component to render; Arg2: where to render it
+        </script>
+    </body>
+</html>

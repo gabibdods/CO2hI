@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='eng'>
+    <head>
+        <title>Counter</title>
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            
+            function App() {
+                
+                const [count, setCount] = React.useState(0); //first arg is initial value, stored in count; 2nd arg is a fct that will set a new value for count
+                                
+                function updateCount() {
+                    setCount(count + 1);
+                }
+
+                return(
+                    <div>
+                        <div>{ count }</div>
+                        <button onClick={updateCount}>Count</button>
+                    </div>
+                );
+            };
+            ReactDOM.render(<App />, document.querySelector("#app"));
+            // Arg1: component to render; Arg2: where to render it
+        </script>
+    </body>
+</html>

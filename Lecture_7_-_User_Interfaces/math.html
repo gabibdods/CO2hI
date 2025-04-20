@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='eng'>
+    <head>
+        <title>Addition</title>
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script>
+            
+        </script>
+        <style>
+            #app {
+                text-align: center;
+                font-family: sans-serif;
+            }
+
+            #question {
+                font-size: 72px;
+            }
+
+            .incorrect {
+                color: red;
+            }
+
+            #winner {
+                font-size: 72px;
+                color: green;
+            }
+
+            #countdown {
+                text-align: center;
+                color: red
+            }
+
+            #end {
+                text-align: center;
+                font-size: 72px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            
+            function App() {
+                
+                function startTimer(duration, display) {
+                    var timer = duration, minutes, seconds;
+                    setInterval(function () {
+                        minutes = parseInt(timer / 60, 10);
+                        seconds = parseInt(timer % 60, 10);
+
+                        minutes = minutes < 10 ? "0" + minutes : minutes;
+                        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                        display.textContent = minutes + ":" + seconds;
+    
+                        if (--timer < 0) {
+                            timer = duration;
+                        }
+                    }   , 1000);
+                }
+        
+                window.onload = function () {
+                    var Countdown = 60 * 1 - 1,
+                        display = document.querySelector('#time');
+                    startTimer(Countdown, display);
+                };
+                
+                const [state,setState] = React.useState({
+                    num1:2,
+                    num2:6,
+                    response: "",
+                    score:0,
+                    incorrect: false
+                });
+
+                function inputKeyPress(event) {
+                    if (event.key ==="Enter") {
+                        const answer = parseInt(state.response);
+                        if (state.num1 + state.num2 === answer) {
+                            setState({
+                                ...state,
+                                num1: Math.ceil(Math.random() * 10),
+                                num2: Math.ceil(Math.random() * 10),
+                                score: state.score + 1,
+                                response:"",
+                                incorrect: false
+
+                            })
+                        } else {
+                            setState({
+                                ...state,
+                                score: state.score - 1,
+                                incorrect: true
+                            });
+                        }
+                    }
+                }
+
+                function updateResponse(event) {
+                    setState({
+                        ...state,
+                        response: event.target.value
+                    });
+                }
+
+                return(
+                    <div>
+                        <div className={state.incorrect ? "incorrect": ""} id="question">{state.num1} + {state.num2}</div>
+                        <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response}/>
+                        <div>Score: {state.score}</div>
+                        <h3 id="countdown">Hurry up! <span id="time">01:00</span></h3>
+                    </div>
+                );
+            };
+            ReactDOM.render(<App />, document.querySelector("#app"));
+        </script>
+        
+    </body>
+</html>
