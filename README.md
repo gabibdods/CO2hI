@@ -1,6 +1,6 @@
 # ✈️ Plane Consumption Calculator — Estimating the Environmental Impact of Air Travel
 
-A full-stack web application built with Django, Python, and SQLite that calculates the estimated CO2 emissions of airplane flights based on aircraft type, route distance, cruise speed, and passenger load.
+A full-stack web application built with Django, Python, and SQLite that calculates the estimated CO2 emissions of airplane flights based on aircraft type, route distance, cruise speed, and passenger load. This was my first large-scale project, testing the limits of my capabilities. Unfortunately, a lot of the files were corrupted due to faulty storage management, so only are left the lecture notes I take from taking a web development course using python and the django framework.
 
 ## 🔍 Problem Statement
 
