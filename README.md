@@ -63,10 +63,6 @@ Air travel is a major contributor to global carbon emissions. Yet, most people l
 - Basic understanding of line integrals and spherical geometry
 - Application of mass and acceleration to estimate fuel consumption
 
-## 📸 Demo
-
-*Include screenshots or a short screen recording here if available.*
-
 ## 🚀 Future Improvements
 
 - Integrate accurate geodesic distance calculations via APIs
