@@ -62,10 +62,3 @@ Air travel is a major contributor to global carbon emissions. Yet, most people l
 
 - Basic understanding of line integrals and spherical geometry
 - Application of mass and acceleration to estimate fuel consumption
-
-## 🚀 Future Improvements
-
-- Integrate accurate geodesic distance calculations via APIs
-- Use real-world aircraft performance datasets (e.g., ICAO, Eurocontrol)
-- Public deployment via Azure, Heroku, or Docker container
-- Add comparison tools for other transport methods (e.g., train vs. flight)
