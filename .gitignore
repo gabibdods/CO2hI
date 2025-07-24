@@ -1,0 +1,27 @@
+# https://github.com/gabibdods/NewRepositoryTemplate:
+*
+
+!.gitattributes
+!.gitignore
+!README.md
+!License/
+!License/LICENSE.md
+!License/NOTICE.md
+
+
+# particular repository ignores:
+
+!Lecture1-HTML_&_CSS/
+!Lecture1-HTML_&_CSS/**
+
+!Lecture3-Python/
+!Lecture3-Python/**
+
+!Lecture4-Django/
+!Lecture4-Django/**
+
+!Lecture6-JavaScript/
+!Lecture6-JavaScript/**
+
+!Lecture7-User_Interfaces/
+!Lecture7-User_Interfaces/**
