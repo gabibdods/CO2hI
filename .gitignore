@@ -1,4 +1,4 @@
-# https://github.com/gabibdods/NewRepositoryTemplate:
+# https://github.com/gabibdods/NewRepo:
 *
 
 !.gitattributes
@@ -12,8 +12,8 @@
 
 # particular repository ignores:
 
-!Lecture1-HTML_&_CSS/
-!Lecture1-HTML_&_CSS/**
+!Lecture1-HTML_CSS/
+!Lecture1-HTML_CSS/**
 
 !Lecture3-Python/
 !Lecture3-Python/**

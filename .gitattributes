@@ -1,4 +1,4 @@
-#*.md -linguist-documentation
-#*.md linguist-detectable
+*.py -linguist-detectable
+*.html -linguist-detectable
 * license=proprietary
 * noai
